@@ -1,0 +1,11 @@
+serper_api_key: "serper_key"
+openai_api_key: "openai_key"
+model_name: "gpt-4-0125-preview"
+template: |
+  Web search result:
+  {context_str}
+  
+  Instructions: You are an economist analyzing companies technology. Using the provided web search results, describe the technological stack of {comp} around {year}. Focus on technologies that the company was using in its day-to-day operations and research. Be as specific as possible and give a lot of details, augmenting web search results with your knowledge. For each technology, mention whether or not it was considered legacy in the field in {year} and whether or not there were disruptive technologies that could replace it. If there was a risk of disruption, mention companies and technologies that were threatening to the given technology. Do not use information that became public after {year}.
+  Query: {query}
+  Output Format: {format}
+  Please organize your output according to the Output Format.
