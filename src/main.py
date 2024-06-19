@@ -5,7 +5,7 @@ from src.llm_answer import GPTAnswer
 
 
 def get_company_desc(comp, year):
-    query = f"\"{comp}\" {year} technologies operations"
+    query = f"{comp} technologies business operations before:{year} after:{str(int(year)-10)}" # use the last 10 years of public info. Example: for 2000, use 1990-2000 web search results. Works quite bad with year < 1990.
     output_format = "1. Technology #1: description, risk of disruption, potential disruptors. Do this for every technology." # User can specify output format
 
     # Fetch web content based on the query
